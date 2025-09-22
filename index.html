@@ -9,8 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#004AAD">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="CANS Sigorta">
+  <link rel="apple-touch-icon" href="/assets/icon-192x192.svg">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/animations.js" defer></script>
+  <script src="/assets/chatbot.js" defer></script>
+  <script src="/assets/calculators.js" defer></script>
+  <script src="/assets/pwa.js" defer></script>
+  <script src="/assets/visual-effects.js" defer></script>
+  <script src="/assets/smart-forms.js" defer></script>
+  <script src="/assets/analytics.js" defer></script>
+  <script src="/assets/loyalty.js" defer></script>
+  <script src="/assets/accessibility.js" defer></script>
 
   <!-- OG/Twitter -->
   <meta property="og:url" content="https://www.canssigorta.com/">
@@ -82,7 +96,7 @@
   </div>
 </header>
 
-<section class="hero-banner">
+<section class="hero-banner" id="main-content" role="banner" aria-label="Ana sayfa hero bölümü">
   <div class="container">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
       <div>
@@ -94,16 +108,16 @@
         <p style="font-size: 1.25rem; margin-bottom: 1rem;"><strong>CANS Sigorta</strong> - AgeSa Resmi Acentesi | 16 Elementer Şirketi ile Kapsamlı Sigorta Çözümleri</p>
         <p style="margin-bottom: 2rem;">Bireysel Emeklilik, Hayat, Trafik, Kasko, DASK, Sağlık ve daha fazlası. İstanbul Küçükçekmece Halkalı'da hizmetinizdeyiz.</p>
         <div class="cta-row">
-          <a href="https://wa.me/905323510731?text=Merhaba%2C%20sigorta%20teklifi%20almak%20istiyorum." class="btn btn-primary">📱 WhatsApp'tan Hemen Teklif Al</a>
-          <a href="tel:+905323510731" class="btn btn-ghost">📞 Hemen Ara: +90 532 351 0731</a>
+          <a href="https://wa.me/905323510731?text=Merhaba%2C%20sigorta%20teklifi%20almak%20istiyorum." class="btn btn-primary" aria-label="WhatsApp ile sigorta teklifi al">📱 WhatsApp'tan Hemen Teklif Al</a>
+          <a href="tel:+905323510731" class="btn btn-ghost" aria-label="Telefon ile hemen ara">📞 Hemen Ara: +90 532 351 0731</a>
         </div>
       </div>
       <div style="text-align: center;">
-        <div style="background: rgba(255,255,255,0.1); border-radius: 2rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
-          <div style="font-size: 4rem; margin-bottom: 1rem;">🛡️</div>
-          <div style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">16+</div>
+        <div class="card-3d glow" style="background: rgba(255,255,255,0.1); border-radius: 2rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);" data-float="1">
+          <div style="font-size: 4rem; margin-bottom: 1rem;" data-float="2">🛡️</div>
+          <div class="text-gradient" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">16+</div>
           <div style="font-size: 1.125rem; opacity: 0.9;">Elementer Şirketi</div>
-          <div style="font-size: 1.5rem; font-weight: 800; margin: 1rem 0 0.5rem;">AgeSa</div>
+          <div class="text-gradient" style="font-size: 1.5rem; font-weight: 800; margin: 1rem 0 0.5rem;">AgeSa</div>
           <div style="font-size: 1.125rem; opacity: 0.9;">Resmi Acentesi</div>
         </div>
       </div>
@@ -115,9 +129,9 @@
   <div class="container">
     <h2>Neden CANS Sigorta?</h2>
     <div class="cards three">
-      <div class="card">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">🏆</div>
-        <h3>AgeSa Resmi Acentesi</h3>
+      <div class="card card-3d interactive" data-float="0.5">
+        <div style="font-size: 3rem; margin-bottom: 1rem;" data-float="1">🏆</div>
+        <h3 class="text-gradient">AgeSa Resmi Acentesi</h3>
         <p>Bireysel Emeklilik ve Hayat Sigortalarında Türkiye'nin en güçlü şirketinin resmi acentesiyiz. Güvenilir ve kaliteli hizmet garantisi.</p>
       </div>
       <div class="card">
@@ -219,9 +233,9 @@
 <section class="section" style="background: var(--gray-50);">
   <div class="container">
     <h2>Hemen Teklif Alın!</h2>
-    <div class="quick-quote">
-      <input type="text" placeholder="Adınız Soyadınız" id="name">
-      <input type="tel" placeholder="Telefon Numaranız" id="phone">
+    <div class="quick-quote smart-form">
+      <input type="text" placeholder="Adınız Soyadınız" id="name" data-autocomplete="name" required>
+      <input type="tel" placeholder="Telefon Numaranız" id="phone" data-autocomplete="phone" required>
       <a href="#" class="btn btn-primary" onclick="sendQuickQuote()">Hızlı Teklif Al</a>
     </div>
     <div class="cta-row">
@@ -229,6 +243,9 @@
       <a href="tel:+905323510731" class="btn btn-ghost">📞 Hemen Ara</a>
       <a href="iletisim.html" class="btn btn-secondary">🏢 Ofisi Ziyaret Et</a>
     </div>
+    
+    <!-- Smart Recommendations -->
+    <div id="smart-recommendations"></div>
   </div>
 </section>
 
