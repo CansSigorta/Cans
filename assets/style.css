@@ -314,3 +314,44 @@ footer a:hover {color:var(--turuncu);}
     grid-template-columns: 1fr;
   }
 }
+
+/* === Sticky CTA Bar === */
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 -6px 20px rgba(0,0,0,.08);
+  border-top: 3px solid var(--turuncu);
+  padding: 10px 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.sticky-cta .btn { margin: 0; }
+.sticky-cta .btn-primary { padding: 10px 18px; }
+.sticky-cta .btn-ghost { padding: 8px 16px; }
+
+/* Quick Quote */
+.quick-quote {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+}
+.quick-quote input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.quick-quote .btn-primary { height: 46px; }
+
+@media(max-width:768px){
+  .quick-quote { grid-template-columns: 1fr; }
+}
