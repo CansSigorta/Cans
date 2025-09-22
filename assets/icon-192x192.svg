@@ -1,0 +1,23 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004AAD" />
+      <stop offset="100%" style="stop-color:#0066CC" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="192" height="192" rx="24" fill="url(#iconGradient)"/>
+  
+  <!-- Shield Icon -->
+  <path d="M96 32L48 48V96C48 120 72 144 96 160C120 144 144 120 144 96V48L96 32Z" fill="white" opacity="0.9"/>
+  
+  <!-- Inner Shield -->
+  <path d="M96 48L64 60V96C64 112 80 128 96 136C112 128 128 112 128 96V60L96 48Z" fill="url(#iconGradient)"/>
+  
+  <!-- Checkmark -->
+  <path d="M80 96L88 104L112 80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="96" y="180" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="700">CANS</text>
+</svg>
