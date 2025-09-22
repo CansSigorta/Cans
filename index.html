@@ -85,11 +85,12 @@
     <nav class="menu">
       <a class="active" href="index.html">Ana Sayfa</a>
       <a href="bes.html">Bireysel Emeklilik</a>
-      <a href="hayat.html">Hayat</a>
+      <a href="hayat.html">Hayat Sigortası</a>
       <a href="trafik.html">Trafik</a>
       <a href="kasko.html">Kasko</a>
       <a href="dask.html">DASK</a>
       <a href="saglik.html">Sağlık</a>
+      <a href="konut.html">Konut</a>
       <a href="about.html">Hakkımızda</a>
       <a href="iletisim.html">İletişim</a>
     </nav>
@@ -205,21 +206,50 @@
 <section class="section">
   <div class="container">
     <h2>Müşterilerimiz Ne Diyor?</h2>
-    <div class="cards three">
-      <div class="card">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"CANS Sigorta ile çalışmak gerçekten güven verici. BES sürecimde her adımda yanımda oldular. Çok memnunum."</p>
-        <div style="font-weight: 600; color: var(--primary);">- Mehmet K.</div>
+    <div class="testimonials-slider" style="position: relative; overflow: hidden; border-radius: 1rem;">
+      <div class="testimonials-track" style="display: flex; transition: transform 0.5s ease;">
+        <div class="testimonial-slide" style="min-width: 100%; padding: 2rem;">
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 1.5rem;">"CANS Sigorta ile çalışmak gerçekten güven verici. BES sürecimde her adımda yanımda oldular. Çok memnunum."</p>
+            <div style="font-weight: 600; color: var(--primary);">- Mehmet K.</div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="min-width: 100%; padding: 2rem;">
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 1.5rem;">"16 farklı şirketten en uygun fiyatı buldular. Trafik sigortamı çok uygun fiyata aldım. Teşekkürler!"</p>
+            <div style="font-weight: 600; color: var(--primary);">- Ayşe M.</div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="min-width: 100%; padding: 2rem;">
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 1.5rem;">"WhatsApp'tan hızlı teklif aldım. Çok profesyonel ve hızlı hizmet. Kesinlikle tavsiye ederim."</p>
+            <div style="font-weight: 600; color: var(--primary);">- Ali R.</div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="min-width: 100%; padding: 2rem;">
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 1.5rem;">"DASK sigortamı CANS Sigorta'dan yaptım. Deprem riskine karşı güvende hissediyorum. Teşekkürler!"</p>
+            <div style="font-weight: 600; color: var(--primary);">- Fatma S.</div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="min-width: 100%; padding: 2rem;">
+          <div class="card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 1.5rem;">"Sağlık sigortamı CANS Sigorta'dan aldım. Hastane ağı çok geniş, prim de çok uygun."</p>
+            <div style="font-weight: 600; color: var(--primary);">- Mustafa T.</div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"16 farklı şirketten en uygun fiyatı buldular. Trafik sigortamı çok uygun fiyata aldım. Teşekkürler!"</p>
-        <div style="font-weight: 600; color: var(--primary);">- Ayşe M.</div>
-      </div>
-      <div class="card">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; margin-bottom: 1rem;">"WhatsApp'tan hızlı teklif aldım. Çok profesyonel ve hızlı hizmet. Kesinlikle tavsiye ederim."</p>
-        <div style="font-weight: 600; color: var(--primary);">- Ali R.</div>
+      <div class="slider-dots" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+        <button class="dot active" data-slide="0" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--primary); cursor: pointer;"></button>
+        <button class="dot" data-slide="1" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--gray-300); cursor: pointer;"></button>
+        <button class="dot" data-slide="2" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--gray-300); cursor: pointer;"></button>
+        <button class="dot" data-slide="3" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--gray-300); cursor: pointer;"></button>
+        <button class="dot" data-slide="4" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--gray-300); cursor: pointer;"></button>
       </div>
     </div>
   </div>
@@ -295,6 +325,33 @@
   }, { threshold: 0.15 });
   
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Testimonials Slider
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.dot');
+  const track = document.querySelector('.testimonials-track');
+  
+  function showSlide(index) {
+    currentSlide = index;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+      dot.style.background = i === currentSlide ? 'var(--primary)' : 'var(--gray-300)';
+    });
+  }
+  
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 5000);
+  
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
 
   // GA4 tracking
   document.addEventListener('click', function(e) {
