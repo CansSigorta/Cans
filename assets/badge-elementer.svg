@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="16 Elementer Şirketi">
-  <rect rx="10" width="280" height="64" fill="#0F172A"/>
-  <g fill="#fff">
-    <text x="20" y="25" font-size="12" font-weight="700" opacity=".9">Anlaşmalı</text>
-    <text x="20" y="47" font-size="20" font-weight="800">16 Elementer Şirketi</text>
-  </g>
-  <g>
-    <circle cx="230" cy="32" r="3" fill="#FF7B00"/>
-    <circle cx="242" cy="32" r="3" fill="#2D7BEA"/>
-    <circle cx="254" cy="32" r="3" fill="#00C389"/>
-  </g>
+<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="elementerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF7B00" />
+      <stop offset="100%" style="stop-color:#FF9500" />
+    </linearGradient>
+  </defs>
+  <rect width="140" height="40" rx="20" fill="url(#elementerGradient)"/>
+  <text x="70" y="25" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="12" font-weight="700">16 Elementer</text>
+  <text x="70" y="35" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="8" font-weight="500">Şirketi</text>
 </svg>
-
