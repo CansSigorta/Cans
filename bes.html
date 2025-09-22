@@ -1,206 +1,274 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bireysel Emeklilik (BES) – CANS Sigorta | AgeSa Resmi Acentesi</title>
-<link rel="canonical" href="https://www.canssigorta.com/bes.html">
-<style>
-  :root{
-    --cans-blue:#004AAD;
-    --cans-orange:#FF6600;
-    --ink:#0F172A;
-    --muted:#6B7280;
-    --bg:#F3F6FA;
-    --card:#FFFFFF;
-    --radius:18px;
-    --shadow:0 10px 24px rgba(0,0,0,.08);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bireysel Emeklilik (BES) | CANS Sigorta - AgeSa Resmi Acentesi</title>
+  <meta name="description" content="CANS Sigorta ile AgeSa'nın resmi acentesi olarak Bireysel Emeklilik (BES) yapın. %30 devlet katkısı ile geleceğinizi güvence altına alın.">
+  <link rel="canonical" href="https://www.canssigorta.com/bes.html">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/animations.js" defer></script>
 
-  .wrap{max-width:1100px;margin:0 auto;padding:24px;}
+  <!-- OG/Twitter -->
+  <meta property="og:url" content="https://www.canssigorta.com/bes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bireysel Emeklilik (BES) | CANS Sigorta">
+  <meta property="og:description" content="AgeSa resmi acentesi ile BES yapın. %30 devlet katkısı ile geleceğinizi güvence altına alın.">
+  <meta property="og:image" content="https://www.canssigorta.com/assets/og-image.svg">
 
-  /* HERO */
-  .hero{
-    background: linear-gradient(135deg, #0D4FD9 0%, #3C7BDB 40%, #5A92E6 100%);
-    color:#fff;border-radius:0 0 28px 28px;box-shadow:var(--shadow);
-    padding:64px 24px 56px; position:relative; overflow:hidden;
-  }
-  .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-  .eyebrow{letter-spacing:.06em;text-transform:uppercase;font-weight:700;opacity:.9;margin-bottom:8px}
-  h1{font-size:40px;line-height:1.15;margin:0 0 12px}
-  .lead{font-size:18px;opacity:.95;margin:0 0 20px}
-  .cta{
-    display:inline-block;background:var(--cans-orange);color:#fff;
-    padding:14px 20px;border-radius:12px;font-weight:700;text-decoration:none;
-    transition:.2s;box-shadow:0 8px 16px rgba(255,102,0,.25)
-  }
-  .cta:hover{filter:brightness(.95);transform:translateY(-1px)}
-  .illust{
-    width:100%;height:auto;border-radius:22px;background:rgba(255,255,255,.08);
-    padding:24px;border:1px solid rgba(255,255,255,.15)
-  }
-
-  /* ICON ROW */
-  .icons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px auto}
-  .ibox{
-    background:var(--card);border-radius:var(--radius);padding:18px;border:1px solid #E6ECF5;box-shadow:var(--shadow)
-  }
-  .ibox h3{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-size:18px}
-  .ibox p{margin:0;color:var(--muted);font-size:14px}
-
-  /* GRID: infographic + photo/text */
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px auto}
-  .card{background:var(--card);border:1px solid #E6ECF5;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
-  .card h2{margin:0 0 10px;font-size:24px;color:var(--cans-blue)}
-  .photo{width:100%;border-radius:14px;aspect-ratio:4/3;object-fit:cover;background:#e9eef9}
-
-  /* FAQ */
-  .faq{margin:8px auto 40px}
-  .acc{background:var(--card);border:1px solid #E6ECF5;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
-  .acc-item + .acc-item{border-top:1px solid #E6ECF5}
-  .acc-btn{
-    width:100%;text-align:left;background:#fff;border:0;padding:18px 56px 18px 18px;cursor:pointer;
-    font-size:16px;font-weight:700;position:relative
-  }
-  .acc-btn:after{
-    content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);
-    color:var(--cans-blue);font-weight:900;font-size:22px
-  }
-  .acc-item.open .acc-btn:after{content:'–'}
-  .acc-panel{max-height:0;overflow:hidden;transition:max-height .25s ease;padding:0 18px;color:var(--muted)}
-  .acc-item.open .acc-panel{max-height:220px;padding:0 18px 16px}
-
-  @media (max-width:980px){
-    .hero .wrap{grid-template-columns:1fr}
-    h1{font-size:32px}
-    .icons{grid-template-columns:1fr}
-    .grid{grid-template-columns:1fr}
-  }
-</style>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0RM2J1V0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-G0RM2J1V0X');
+  </script>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">AgeSa Resmi Acentesi - Bireysel Emeklilik (BES)</div>
-      <h1>Bireysel Emeklilik ile Geleceğini Güvence Altına Al</h1>
-      <p class="lead">CANS Sigorta olarak AgeSa'nın resmi acentesi sıfatıyla, her yatırdığın 1 TL'ye <strong>%30 devlet katkısı</strong> ile birikimini daha hızlı büyüt.</p>
-      <!-- WhatsApp veya form linki: href'i değiştir -->
-      <a class="cta" id="ctaTeklif" href="https://wa.me/905522099443?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum." target="_blank" rel="noopener">Teklif Al</a>
-    </div>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="/assets/logo.png" alt="CANS Sigorta">
+      <span>CANS Sigorta</span>
+    </a>
+    <button class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+    <nav class="menu">
+      <a href="index.html">Ana Sayfa</a>
+      <a class="active" href="bes.html">Bireysel Emeklilik</a>
+      <a href="hayat.html">Hayat</a>
+      <a href="trafik.html">Trafik</a>
+      <a href="kasko.html">Kasko</a>
+      <a href="dask.html">DASK</a>
+      <a href="saglik.html">Sağlık</a>
+      <a href="about.html">Hakkımızda</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO görseli -->
-    <div class="illust">
-      <!-- Not: repo yapında assets/ klasörü kökte. img/ yok. -->
-      <img src="assets/bes-hero.webp?v=2" alt="BES Hero Banner" style="width:100%;border-radius:22px;">
+<section class="hero-banner">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 50px; margin-bottom: 1rem; font-size: 0.875rem; font-weight: 600;">
+          <img src="/assets/badge-agesa.svg" alt="AgeSa Resmi Acentesi" style="height: 24px;">
+          <span>Resmi Acentesi</span>
+        </div>
+        <h1>Bireysel Emeklilik ile Geleceğinizi Güvence Altına Alın</h1>
+        <p style="font-size: 1.25rem; margin-bottom: 2rem;">CANS Sigorta olarak AgeSa'nın resmi acentesi sıfatıyla, her yatırdığınız 1 TL'ye <strong>%30 devlet katkısı</strong> ile birikiminizi daha hızlı büyütün.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/905323510731?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum." class="btn btn-primary">📱 WhatsApp'tan Teklif Al</a>
+          <a href="tel:+905323510731" class="btn btn-ghost">📞 Hemen Ara</a>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 2rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <div style="font-size: 4rem; margin-bottom: 1rem;">💰</div>
+          <div style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">%30</div>
+          <div style="font-size: 1.125rem; opacity: 0.9;">Devlet Katkısı</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="wrap">
-
-  <!-- ICON ROW -->
-  <section class="icons">
-    <div class="ibox">
-      <h3>
-        <!-- Kalkan ikon -->
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.5 9-7 11c-3.5-2-7-6-7-11V5l7-3z" stroke="#FF6600" stroke-width="2" fill="none"/><path d="M8 12l3 3l5-5" stroke="#FF6600" stroke-width="2" fill="none"/></svg>
-        Güvenli Tasarruf
-      </h3>
-      <p>Paran ve sözleşmen güvence altında.</p>
-    </div>
-    <div class="ibox">
-      <h3>
-        <!-- Bar ikon -->
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="12" width="4" height="9" fill="#FF6600"/><rect x="10" y="8" width="4" height="13" fill="#FF6600"/><rect x="17" y="4" width="4" height="17" fill="#FF6600"/></svg>
-        Uzman Yönetim
-      </h3>
-      <p>Fonların profesyonelce yönetilir.</p>
-    </div>
-    <div class="ibox">
-      <h3>
-        <!-- Şimşek ikon -->
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8l12-14h-7l1-6z" fill="#FF6600"/></svg>
-        Esnek Planlar
-      </h3>
-      <p>Katkı payını istediğin zaman değiştirebilirsin.</p>
-    </div>
-  </section>
-
-  <!-- GRID: INFOGRAPHIC + PHOTO/TEXT -->
-  <section class="grid">
-    <!-- INFOGRAPHIC CARD -->
-    <div class="card">
-      <h2>%30 Devlet Katkısı – Örnek</h2>
-      <p class="muted" style="color:var(--muted);margin-top:-2px">10.000 TL katkı → 13.000 TL toplam (katkı + devlet payı)</p>
-      <!-- Inline SVG bar chart -->
-      <svg viewBox="0 0 640 260" width="100%" height="auto" aria-label="10.000 → 13.000 bar grafiği">
-        <rect x="0" y="0" width="640" height="260" rx="14" fill="#F8FAFF" />
-        <line x1="70" y1="210" x2="580" y2="210" stroke="#D6E2FF" stroke-width="2"/>
-        <rect x="140" y="110" width="90" height="100" rx="8" fill="#153E90"/>
-        <rect x="410" y="70" width="90" height="140" rx="8" fill="#FF6600"/>
-        <text x="185" y="235" text-anchor="middle" font-size="16" fill="#0F172A">10.000 TL</text>
-        <text x="455" y="235" text-anchor="middle" font-size="16" fill="#0F172A">13.000 TL</text>
-        <text x="140" y="95" font-size="14" fill="#6B7280">Katkı</text>
-        <text x="410" y="55" font-size="14" fill="#6B7280">Katkı + %30</text>
-        <rect x="270" y="24" rx="10" ry="10" width="100" height="28" fill="#EAF1FF" />
-        <text x="320" y="43" text-anchor="middle" font-size="14" fill="#0D3AA9">%30 Artış</text>
-      </svg>
-      <p style="color:var(--muted);font-size:12px;margin-top:8px">*Yıllık üst sınıra tabidir. Getiri; fon tercihi ve piyasa koşullarına bağlıdır.</p>
-    </div>
-
-    <!-- PHOTO + TEXT CARD -->
-    <div class="card">
-      <!-- Repoda mevcut bir görseli kullandım; istersen değiştir. -->
-      <img class="photo" src="assets/og-image.jpg" alt="BES görseli">
-      <h2>Emeklilik Hayallerin için Bugünden Başla</h2>
-      <p style="color:var(--muted)">Düzenli katkı payı ile birikimini büyüt, devlet katkısından yararlan. Planını istediğin zaman güncelle.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <h2 style="color:var(--cans-blue);margin:12px 0 16px">Sık Sorulan Sorular</h2>
-    <div class="acc" id="faq">
-      <div class="acc-item">
-        <button class="acc-btn">BES nedir?</button>
-        <div class="acc-panel">
-          <p>Bireysel Emeklilik Sistemi; düzenli katkı payı ödeyerek gelecekte ek gelir elde etmeni sağlayan, <strong>devlet katkısıyla desteklenen</strong> bir tasarruf ve yatırım sistemidir.</p>
-        </div>
+<section class="section">
+  <div class="container">
+    <h2>BES'in Avantajları</h2>
+    <div class="cards three">
+      <div class="card">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+        <h3>Güvenli Tasarruf</h3>
+        <p>Paranız ve sözleşmeniz devlet güvencesi altında. AgeSa'nın güçlü finansal yapısı ile güvendesiniz.</p>
       </div>
-      <div class="acc-item">
-        <button class="acc-btn">Devlet katkısı nasıl işler?</button>
-        <div class="acc-panel">
-          <p>Ödediğin katkı payının <strong>%30’u</strong>, yıllık üst sınıra kadar devlet tarafından hesabına eklenir. Böylece birikimin daha hızlı büyür. </p>
+      <div class="card">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+        <h3>Uzman Yönetim</h3>
+        <p>Fonlarınız profesyonel portföy yöneticileri tarafından yönetilir. Risk dağılımı ile güvenli büyüme.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+        <h3>Esnek Planlar</h3>
+        <p>Katkı payınızı istediğiniz zaman değiştirebilir, durdurabilir veya artırabilirsiniz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div>
+        <h2>%30 Devlet Katkısı Nasıl Çalışır?</h2>
+        <div style="background: var(--white); border-radius: 1rem; padding: 2rem; box-shadow: var(--shadow-lg); margin: 2rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div>
+              <div style="font-size: 0.875rem; color: var(--gray-500);">Sizin Katkınız</div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">10.000 TL</div>
+            </div>
+            <div style="font-size: 2rem;">+</div>
+            <div>
+              <div style="font-size: 0.875rem; color: var(--gray-500);">Devlet Katkısı</div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary);">3.000 TL</div>
+            </div>
+            <div style="font-size: 2rem;">=</div>
+            <div>
+              <div style="font-size: 0.875rem; color: var(--gray-500);">Toplam</div>
+              <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent);">13.000 TL</div>
+            </div>
+          </div>
+          <div style="background: var(--gray-100); height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%); height: 100%; width: 100%;"></div>
+          </div>
+        </div>
+        <p style="color: var(--gray-600); font-size: 0.875rem;">*Yıllık üst sınıra tabidir. Getiri; fon tercihi ve piyasa koşullarına bağlıdır.</p>
+      </div>
+      <div>
+        <div style="background: var(--white); border-radius: 1rem; padding: 2rem; box-shadow: var(--shadow-lg);">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">BES Başvuru Süreci</h3>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="background: var(--primary); color: var(--white); width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">1</div>
+              <span>Kimlik belgelerinizi hazırlayın</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="background: var(--primary); color: var(--white); width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">2</div>
+              <span>Katkı payı miktarını belirleyin</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="background: var(--primary); color: var(--white); width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">3</div>
+              <span>Fon seçimi yapın</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="background: var(--primary); color: var(--white); width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem;">4</div>
+              <span>Sözleşme imzalayın</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <div class="container">
+    <h2>Sık Sorulan Sorular</h2>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-btn">BES nedir ve nasıl çalışır?</button>
+        <div class="acc-panel">
+          <p>Bireysel Emeklilik Sistemi; düzenli katkı payı ödeyerek gelecekte ek gelir elde etmenizi sağlayan, <strong>devlet katkısıyla desteklenen</strong> bir tasarruf ve yatırım sistemidir. Her yatırdığınız 1 TL'ye devlet %30 katkı sağlar.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn">Devlet katkısı nasıl hesaplanır?</button>
+        <div class="acc-panel">
+          <p>Ödediğiniz katkı payının <strong>%30'u</strong>, yıllık üst sınıra kadar devlet tarafından hesabınıza eklenir. 2024 yılı için yıllık üst sınır 15.000 TL'dir. Bu da maksimum 4.500 TL devlet katkısı demektir.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn">BES'ten ne zaman para çekebilirim?</button>
+        <div class="acc-panel">
+          <p>BES'ten para çekme işlemi 56 yaşını doldurduktan sonra yapılabilir. Acil durumlarda (hastalık, işsizlik, ev satın alma) erken çekim yapılabilir ancak devlet katkısı geri alınır.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn">Fon seçimi nasıl yapılır?</button>
+        <div class="acc-panel">
+          <p>AgeSa'nın sunduğu farklı fon seçenekleri arasından risk toleransınıza uygun olanı seçebilirsiniz. Konservatif, dengeli ve agresif fon seçenekleri mevcuttur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>
-  // CTA: Form sayfan varsa aşağıyı açıp linki değiştir.
-  // document.getElementById('ctaTeklif').href = '/teklif-al?urun=BES';
+<section class="section" style="background: linear-gradient(135deg, var(--primary) 0%, #0066CC 100%); color: var(--white);">
+  <div class="container center">
+    <h2 style="color: var(--white);">BES'e Başlamaya Hazır mısınız?</h2>
+    <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">AgeSa'nın resmi acentesi olarak size en uygun BES planını hazırlayalım.</p>
+    <div class="cta-row">
+      <a href="https://wa.me/905323510731?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum." class="btn" style="background: var(--white); color: var(--primary);">📱 WhatsApp'tan Başla</a>
+      <a href="tel:+905323510731" class="btn" style="background: transparent; color: var(--white); border: 2px solid var(--white);">📞 Hemen Ara</a>
+    </div>
+  </div>
+</section>
 
-  // Accordion
-  document.querySelectorAll('.acc-btn').forEach((btn)=>{
-    btn.addEventListener('click', ()=>{
-      const item = btn.parentElement;
-      item.classList.toggle('open');
-    });
-  });
-</script>
+<footer>
+  <div class="container">
+    <div class="contact">📞 <a href="tel:+905323510731">+90 532 351 0731</a>  |  📞 <a href="tel:+905522099443">+90 552 209 9443</a>  |  📧 <a href="mailto:can@canssigorta.com">can@canssigorta.com</a></div>
+    <div style="margin-top:8px;color:#888">© <span id="yil"></span> CANS Sigorta</div>
+  </div>
+</footer>
 
 <div class="sticky-cta" role="region" aria-label="Hızlı iletişim">
   <a class="btn btn-primary" href="https://wa.me/905323510731?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum.">📱 WhatsApp</a>
   <a class="btn btn-ghost" href="tel:+905323510731">📞 Ara</a>
   <a class="btn btn-ghost" href="mailto:can@canssigorta.com">📧 E-posta</a>
 </div>
+
+<a class="whatsapp-fab" href="https://wa.me/905323510731?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum." aria-label="WhatsApp">WhatsApp</a>
+
+<script>
+  document.getElementById('yil').textContent = new Date().getFullYear();
+
+  // Accordion functionality
+  document.querySelectorAll('.acc-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      // Close all accordion items
+      document.querySelectorAll('.acc-item').forEach(item => {
+        item.classList.remove('open');
+      });
+      
+      // Open clicked item if it wasn't open
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+
+  // Intersection Observer for animations
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('reveal-on');
+    });
+  }, { threshold: 0.15 });
+  
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // GA4 tracking
+  document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if (!a) return;
+    
+    if (a.href.includes('wa.me')) {
+      gtag('event', 'whatsapp_click', {
+        link_url: a.href,
+        location: window.location.pathname
+      });
+    }
+    
+    if (a.href.startsWith('tel:')) {
+      gtag('event', 'phone_click', {
+        phone: a.href.replace('tel:', ''),
+        location: window.location.pathname
+      });
+    }
+    
+    if (a.href.startsWith('mailto:')) {
+      gtag('event', 'email_click', {
+        email: a.href.replace('mailto:', ''),
+        location: window.location.pathname
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
