@@ -17,6 +17,25 @@
   <meta property="og:title" content="CANS Sigorta | AgeSa Resmi Acentesi | İstanbul Halkalı">
   <meta property="og:description" content="CANS Sigorta - AgeSa resmi acentesi, 16 Elementer şirketi ile profesyonel sigorta hizmetleri. İstanbul Küçükçekmece Halkalı.">
   <meta property="og:image" content="https://www.canssigorta.com/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CANS Sigorta Acentelik Hizmetleri",
+    "image": "https://www.canssigorta.com/assets/og-image.jpg",
+    "url": "https://www.canssigorta.com/",
+    "telephone": "+90 532 351 0731",
+    "email": "can@canssigorta.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Küçükçekmece",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "priceRange": "$$",
+    "areaServed": "TR"
+  }
+  </script>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0RM2J1V0X"></script>
@@ -49,7 +68,7 @@
   </div>
 </header>
 
-<section class="hero-banner" style="--hero:linear-gradient(135deg, #004aad 0%, #0066cc 100%)">
+<section class="hero-banner" style="--hero:url('/assets/hero-wave.svg')">
   <div class="container">
     <h1>İstanbul'un En Güvenilir Sigorta Acentesi</h1>
     <p><strong>CANS Sigorta</strong> - AgeSa Resmi Acentesi | 16 Elementer Şirketi ile Kapsamlı Sigorta Çözümleri</p>
@@ -63,6 +82,11 @@
 
 <section class="section reveal">
   <div class="container">
+    <div class="quick-quote" style="margin-bottom:20px">
+      <input type="text" id="qq-name" placeholder="Adınız Soyadınız">
+      <input type="text" id="qq-plate" placeholder="Plaka (örn: 34ABC123)">
+      <a id="qq-send" class="btn btn-primary" href="#">WhatsApp'tan Hızlı Teklif</a>
+    </div>
     <h2>Neden CANS Sigorta?</h2>
     <div class="grid">
       <div class="card">
@@ -161,6 +185,12 @@
   </div>
 </footer>
 
+<div class="sticky-cta" role="region" aria-label="Hızlı iletişim">
+  <a class="btn btn-primary" href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakk%C4%B1nda%20h%C4%B1zl%C4%B1%20teklif%20almak%20istiyorum.">📱 WhatsApp</a>
+  <a class="btn btn-ghost" href="tel:+905323510731">📞 Ara</a>
+  <a class="btn btn-ghost" href="mailto:can@canssigorta.com">📧 E-posta</a>
+</div>
+
 <a class="whatsapp-fab" href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20bilgi%20almak%20istiyorum." aria-label="WhatsApp">WhatsApp</a>
 
 <script>
@@ -168,6 +198,17 @@
 
   const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('reveal-on');});},{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Quick Quote WA link
+  const qq=document.getElementById('qq-send');
+  if(qq){
+    qq.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const name=(document.getElementById('qq-name')||{}).value||'';
+      const plate=(document.getElementById('qq-plate')||{}).value||'';
+      const msg=encodeURIComponent(`Merhaba, hızlı teklif almak istiyorum.\nAd Soyad: ${name}\nPlaka: ${plate}`);
+      window.location.href=`https://wa.me/905323510731?text=${msg}`;
+    });
+  }
 </script>
 
 </body>
