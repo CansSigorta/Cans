@@ -7,7 +7,7 @@
   <meta name="description" content="CANS Sigorta iletişim: İstanbul Küçükçekmece Halkalı ofisimiz, telefon, e-posta, WhatsApp ve konum bilgileri.">
   <link rel="canonical" href="https://www.canssigorta.com/iletisim.html">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/animations.js" defer></script>
@@ -20,12 +20,20 @@
   <script src="/assets/loyalty.js" defer></script>
   <script src="/assets/accessibility.js" defer></script>
 
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#004AAD">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="CANS Sigorta">
+  <link rel="apple-touch-icon" href="/assets/icon-192x192.svg">
+
   <!-- OG -->
   <meta property="og:url" content="https://www.canssigorta.com/iletisim.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="İletişim | CANS Sigorta">
   <meta property="og:description" content="CANS Sigorta iletişim: Telefon, e-posta, WhatsApp ve konum bilgileri.">
-  <meta property="og:image" content="https://www.canssigorta.com/assets/og-image.jpg">
+  <meta property="og:image" content="https://www.canssigorta.com/assets/og-image.svg">
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0RM2J1V0X"></script>
@@ -39,11 +47,11 @@
 
 <header>
   <div class="container nav">
-    <div class="brand">
-      <img src="/assets/logo.png" alt="CANS Sigorta" style="height:40px">
-      <div class="word">CANS Sigorta</div>
-    </div>
-    <div class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰ Menü</div>
+    <a href="index.html" class="brand">
+      <img src="/assets/logo.png" alt="CANS Sigorta">
+      <span>CANS Sigorta</span>
+    </a>
+    <button class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
     <nav class="menu">
       <a href="index.html">Ana Sayfa</a>
       <a href="bes.html">Bireysel Emeklilik</a>
@@ -58,65 +66,167 @@
   </div>
 </header>
 
-<section class="hero-banner" style="--hero:linear-gradient(135deg, #004aad 0%, #0066cc 100%)">
-  <div class="container">
-    <h1>İletişim</h1>
-    <p>İstanbul Küçükçekmece Halkalı'daki ofisimizde sizleri ağırlamaktan mutluluk duyarız. Tüm sorularınızı yanıtlamak için buradayız.</p>
-  </div>
-</section>
-
-<section class="section reveal">
-  <div class="container">
-    <h2>Hızlı İletişim</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>📞 Telefon</h3>
-        <p><a href="tel:+905323510731">+90 532 351 0731</a></p>
-        <p><a href="tel:+905522099443">+90 552 209 9443</a></p>
-      </div>
-      <div class="card">
-        <h3>📧 E-posta</h3>
-        <p><a href="mailto:can@canssigorta.com">can@canssigorta.com</a></p>
-      </div>
-      <div class="card">
-        <h3>💬 WhatsApp</h3>
-        <p><a href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20bilgi%20almak%20istiyorum.">WhatsApp üzerinden yazın</a></p>
-      </div>
-      <div class="card">
-        <h3>📍 Adres</h3>
-        <p>İstanbul Küçükçekmece<br>Halkalı</p>
+<!-- Hero Section -->
+<section class="hero-banner" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\"><defs><radialGradient id=\"a\" cx=\"50%\" cy=\"50%\" r=\"50%\"><stop offset=\"0%\" stop-color=\"%23ffffff\" stop-opacity=\"0.1\"/><stop offset=\"100%\" stop-color=\"%23ffffff\" stop-opacity=\"0\"/></radialGradient></defs><circle cx=\"200\" cy=\"200\" r=\"100\" fill=\"url(%23a)\"/><circle cx=\"800\" cy=\"300\" r=\"150\" fill=\"url(%23a)\"/><circle cx=\"400\" cy=\"700\" r=\"120\" fill=\"url(%23a)\"/></svg>') no-repeat center center; background-size: cover; opacity: 0.3;"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div style="text-align: center; color: var(--white);">
+      <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3);">🚀 İletişime Geçin</h1>
+      <p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">İstanbul Küçükçekmece Halkalı'daki ofisimizde sizleri ağırlamaktan mutluluk duyarız. <strong>7/24</strong> hizmetinizdeyiz!</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20bilgi%20almak%20istiyorum." class="btn" style="background: var(--white); color: var(--primary); font-weight: 600; padding: 1rem 2rem; border-radius: 50px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+          📱 WhatsApp'tan Yaz
+        </a>
+        <a href="tel:+905323510731" class="btn" style="background: transparent; color: var(--white); border: 2px solid var(--white); font-weight: 600; padding: 1rem 2rem; border-radius: 50px;">
+          📞 Hemen Ara
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Hızlı İletişim Kartları -->
 <section class="section reveal">
   <div class="container">
-    <h2>Bize Mesaj Gönderin</h2>
-    <form action="mailto:can@canssigorta.com" method="post" enctype="text/plain" class="contact-form">
-      <label for="isim">Adınız Soyadınız</label>
-      <input type="text" id="isim" name="isim" required>
-      <label for="email">E-posta</label>
-      <input type="email" id="email" name="email" required>
-      <label for="mesaj">Mesajınız</label>
-      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
-      <button type="submit">Gönder</button>
-    </form>
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: var(--primary);">⚡ Hızlı İletişim</h2>
+    <div class="cards four" style="gap: 2rem;">
+      <div class="card card-3d glow" style="text-align: center; padding: 2rem; border: none; box-shadow: var(--shadow-xl);" data-float="1">
+        <div style="font-size: 4rem; margin-bottom: 1.5rem;">📞</div>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">Telefon</h3>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="tel:+905323510731" style="color: var(--primary); font-weight: 600; font-size: 1.125rem; text-decoration: none;">+90 532 351 0731</a>
+          <a href="tel:+905522099443" style="color: var(--primary); font-weight: 600; font-size: 1.125rem; text-decoration: none;">+90 552 209 9443</a>
+        </div>
+        <p style="color: var(--gray-600); font-size: 0.875rem; margin-top: 1rem;">7/24 Açık</p>
+      </div>
+      
+      <div class="card card-3d glow" style="text-align: center; padding: 2rem; border: none; box-shadow: var(--shadow-xl);" data-float="2">
+        <div style="font-size: 4rem; margin-bottom: 1.5rem;">💬</div>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">WhatsApp</h3>
+        <a href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20bilgi%20almak%20istiyorum." style="color: var(--accent); font-weight: 600; font-size: 1.125rem; text-decoration: none; display: block; margin-bottom: 1rem;">WhatsApp'tan Yaz</a>
+        <p style="color: var(--gray-600); font-size: 0.875rem;">Anında Yanıt</p>
+      </div>
+      
+      <div class="card card-3d glow" style="text-align: center; padding: 2rem; border: none; box-shadow: var(--shadow-xl);" data-float="3">
+        <div style="font-size: 4rem; margin-bottom: 1.5rem;">📧</div>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">E-posta</h3>
+        <a href="mailto:can@canssigorta.com" style="color: var(--primary); font-weight: 600; font-size: 1.125rem; text-decoration: none; display: block; margin-bottom: 1rem;">can@canssigorta.com</a>
+        <p style="color: var(--gray-600); font-size: 0.875rem;">24 Saat İçinde Yanıt</p>
+      </div>
+      
+      <div class="card card-3d glow" style="text-align: center; padding: 2rem; border: none; box-shadow: var(--shadow-xl);" data-float="4">
+        <div style="font-size: 4rem; margin-bottom: 1.5rem;">📍</div>
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">Adres</h3>
+        <p style="color: var(--gray-700); font-weight: 500; margin-bottom: 1rem;">İstanbul Küçükçekmece<br>Halkalı</p>
+        <a href="https://maps.google.com/?q=Küçükçekmece+Halkalı" style="color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.875rem;">Haritada Gör</a>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Akıllı İletişim Formu -->
+<section class="section reveal" style="background: var(--gray-50);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+      <div>
+        <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;">💬 Bize Mesaj Gönderin</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">Sigorta ihtiyaçlarınızı bize iletin, size en uygun çözümü sunalım!</p>
+        
+        <div style="background: var(--white); border-radius: 1rem; padding: 2rem; box-shadow: var(--shadow-lg);">
+          <form class="contact-form" id="contact-form">
+            <div style="margin-bottom: 1.5rem;">
+              <label for="isim" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Adınız Soyadınız</label>
+              <input type="text" id="isim" name="isim" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">E-posta</label>
+              <input type="email" id="email" name="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label for="telefon" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label for="sigorta-turu" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Sigorta Türü</label>
+              <select id="sigorta-turu" name="sigorta-turu" style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.3s;">
+                <option value="">Seçiniz</option>
+                <option value="bes">Bireysel Emeklilik (BES)</option>
+                <option value="hayat">Hayat Sigortası</option>
+                <option value="trafik">Trafik Sigortası</option>
+                <option value="kasko">Kasko Sigortası</option>
+                <option value="dask">DASK</option>
+                <option value="saglik">Sağlık Sigortası</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+              <label for="mesaj" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Mesajınız</label>
+              <textarea id="mesaj" name="mesaj" rows="5" required style="width: 100%; padding: 1rem; border: 2px solid var(--gray-200); border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.3s; resize: vertical;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600; border-radius: 0.5rem;">
+              🚀 Mesajı Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div>
+        <div style="background: var(--white); border-radius: 1rem; padding: 2rem; box-shadow: var(--shadow-lg); margin-bottom: 2rem;">
+          <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">⏰ Çalışma Saatleri</h3>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--gray-50); border-radius: 0.5rem;">
+              <span style="font-weight: 600;">Pazartesi - Cuma</span>
+              <span style="color: var(--primary); font-weight: 600;">09:00 - 18:00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--gray-50); border-radius: 0.5rem;">
+              <span style="font-weight: 600;">Cumartesi</span>
+              <span style="color: var(--primary); font-weight: 600;">09:00 - 15:00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--accent); color: var(--white); border-radius: 0.5rem;">
+              <span style="font-weight: 600;">Pazar</span>
+              <span style="font-weight: 600;">Kapalı</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white); border-radius: 1rem; padding: 2rem; text-align: center;">
+          <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">🎯 Acil Durum?</h3>
+          <p style="margin-bottom: 1.5rem; opacity: 0.9;">Sigorta acil durumunuz mu var? Hemen arayın!</p>
+          <a href="tel:+905323510731" class="btn" style="background: var(--white); color: var(--primary); font-weight: 600; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; display: inline-block;">
+            🚨 Acil Ara
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Harita -->
 <section class="section reveal">
   <div class="container">
-    <h2>Konumumuz</h2>
-    <div style="width:100%;height:400px">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12033.2023!2d28.890!3d41.029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDEuMDI5LCAyOC44OTA!5e0!3m2!1str!2str!4v1692892500000!5m2!1str!2str" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen 
-        loading="lazy">
-      </iframe>
+    <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: var(--primary);">🗺️ Konumumuz</h2>
+    <div style="background: var(--white); border-radius: 1rem; padding: 2rem; box-shadow: var(--shadow-lg);">
+      <div style="width: 100%; height: 400px; border-radius: 0.5rem; overflow: hidden;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12033.2023!2d28.890!3d41.029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDEuMDI5LCAyOC44OTA!5e0!3m2!1str!2str!4v1692892500000!5m2!1str!2str" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <p style="color: var(--gray-600); margin-bottom: 1rem;">📍 İstanbul Küçükçekmece Halkalı</p>
+        <a href="https://maps.google.com/?q=Küçükçekmece+Halkalı" class="btn btn-ghost" style="text-decoration: none;">
+          🧭 Yol Tarifi Al
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -131,14 +241,74 @@
 <a class="whatsapp-fab" href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20bilgi%20almak%20istiyorum." aria-label="WhatsApp">WhatsApp</a>
 
 <script>
-  document.getElementById('yil').textContent=new Date().getFullYear();
+  document.getElementById('yil').textContent = new Date().getFullYear();
 
-  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('reveal-on');});},{threshold:.15});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Form handling
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Create WhatsApp message
+    const message = `Merhaba! İletişim formundan mesaj gönderiyorum:
+
+👤 Ad Soyad: ${data.isim}
+📧 E-posta: ${data.email}
+📞 Telefon: ${data.telefon || 'Belirtilmemiş'}
+🛡️ Sigorta Türü: ${data['sigorta-turu'] || 'Belirtilmemiş'}
+
+💬 Mesaj:
+${data.mesaj}
+
+Teşekkürler!`;
+    
+    const whatsappUrl = `https://wa.me/905323510731?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    alert('Mesajınız WhatsApp\'a yönlendiriliyor!');
+  });
+
+  // Intersection Observer for animations
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('reveal-on');
+    });
+  }, { threshold: 0.15 });
+  
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // GA4 tracking
+  document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if (!a) return;
+    
+    if (a.href.includes('wa.me')) {
+      gtag('event', 'whatsapp_click', {
+        link_url: a.href,
+        location: window.location.pathname
+      });
+    }
+    
+    if (a.href.startsWith('tel:')) {
+      gtag('event', 'phone_click', {
+        phone: a.href.replace('tel:', ''),
+        location: window.location.pathname
+      });
+    }
+    
+    if (a.href.startsWith('mailto:')) {
+      gtag('event', 'email_click', {
+        email: a.href.replace('mailto:', ''),
+        location: window.location.pathname
+      });
+    }
+  });
 </script>
 
 <div class="sticky-cta" role="region" aria-label="Hızlı iletişim">
-  <a class="btn btn-primary" href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakk%C4%B1nda%20h%C4%B1zl%C4%B1%20teklif%20almak%20istiyorum.">📱 WhatsApp</a>
+  <a class="btn btn-primary" href="https://wa.me/905323510731?text=Merhaba%2C%20CANS%20Sigorta%20hakkında%20hızlı%20teklif%20almak%20istiyorum.">📱 WhatsApp</a>
   <a class="btn btn-ghost" href="tel:+905323510731">📞 Ara</a>
   <a class="btn btn-ghost" href="mailto:can@canssigorta.com">📧 E-posta</a>
 </div>
