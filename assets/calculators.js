@@ -162,35 +162,8 @@ class CANSCalculators {
   }
 
   addCalculatorButtons() {
-    // Add to BES page
-    const besPage = document.querySelector('a[href="bes.html"]');
-    if (besPage) {
-      const calculatorBtn = document.createElement('button');
-      calculatorBtn.className = 'btn btn-secondary calculator-btn';
-      calculatorBtn.innerHTML = '💰 BES Hesapla';
-      calculatorBtn.onclick = () => this.openCalculator('bes');
-      besPage.parentNode.insertBefore(calculatorBtn, besPage.nextSibling);
-    }
-
-    // Add to Trafik page
-    const trafikPage = document.querySelector('a[href="trafik.html"]');
-    if (trafikPage) {
-      const calculatorBtn = document.createElement('button');
-      calculatorBtn.className = 'btn btn-secondary calculator-btn';
-      calculatorBtn.innerHTML = '🚗 Trafik Hesapla';
-      calculatorBtn.onclick = () => this.openCalculator('trafik');
-      trafikPage.parentNode.insertBefore(calculatorBtn, trafikPage.nextSibling);
-    }
-
-    // Add to Kasko page
-    const kaskoPage = document.querySelector('a[href="kasko.html"]');
-    if (kaskoPage) {
-      const calculatorBtn = document.createElement('button');
-      calculatorBtn.className = 'btn btn-secondary calculator-btn';
-      calculatorBtn.innerHTML = '🛡️ Kasko Hesapla';
-      calculatorBtn.onclick = () => this.openCalculator('kasko');
-      kaskoPage.parentNode.insertBefore(calculatorBtn, kaskoPage.nextSibling);
-    }
+    // Calculator buttons removed - they were cluttering the navigation
+    // Calculators are still available through chatbot and dedicated pages
   }
 
   openCalculator(type) {

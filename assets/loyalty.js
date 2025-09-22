@@ -56,7 +56,7 @@ class CANSLoyalty {
   createLoyaltyWidget() {
     const widget = document.createElement('div');
     widget.id = 'loyalty-widget';
-    widget.className = 'loyalty-widget';
+    widget.className = 'loyalty-widget collapsed'; // Start collapsed
     widget.innerHTML = `
       <div class="loyalty-header">
         <div class="loyalty-icon">🏆</div>
@@ -85,40 +85,13 @@ class CANSLoyalty {
   }
 
   createPointsDisplay() {
-    const pointsDisplay = document.createElement('div');
-    pointsDisplay.id = 'points-display';
-    pointsDisplay.className = 'points-display';
-    pointsDisplay.innerHTML = `
-      <div class="points-icon">⭐</div>
-      <div class="points-text">${this.points} Puan</div>
-    `;
-
-    // Add to header
-    const header = document.querySelector('header .nav');
-    if (header) {
-      header.appendChild(pointsDisplay);
-    }
+    // Points display removed to clean up the header
+    // Points are still visible in the loyalty widget
   }
 
   createLevelProgress() {
-    const progressBar = document.createElement('div');
-    progressBar.id = 'level-progress';
-    progressBar.className = 'level-progress';
-    progressBar.innerHTML = `
-      <div class="level-info">
-        <span class="current-level">${this.level}</span>
-        <span class="next-level">${this.getNextLevel()}</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" style="width: ${this.getLevelProgress()}%"></div>
-      </div>
-    `;
-
-    // Add to sticky CTA area
-    const stickyCTA = document.querySelector('.sticky-cta');
-    if (stickyCTA) {
-      stickyCTA.appendChild(progressBar);
-    }
+    // Level progress removed to clean up the sticky CTA
+    // Progress is still visible in the loyalty widget
   }
 
   // Point System
