@@ -49,6 +49,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Light mode text improvements */
+:not(.dark-mode) .card p,
+:not(.dark-mode) .section p,
+:not(.dark-mode) .contact,
+:not(.dark-mode) footer {
+  color: var(--gray-700) !important;
+}
+
+:not(.dark-mode) .card h3,
+:not(.dark-mode) .section h2,
+:not(.dark-mode) .section h3 {
+  color: var(--gray-800) !important;
+}
+
 /* === Container & Layout === */
 .container {
   max-width: 1200px;
