@@ -130,7 +130,7 @@ header {
   text-decoration: none;
   font-size: 1.5rem;
   flex-shrink: 0;
-  margin-right: 3rem;
+  margin-right: 0;
 }
 
 .brand img {
@@ -159,7 +159,8 @@ header {
   gap: 2.5rem;
   list-style: none;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 2rem;
 }
 
 .menu a {
@@ -648,7 +649,7 @@ footer a:hover {
   
   .brand {
     font-size: 1.25rem;
-    margin-right: 1rem;
+    margin-right: 0;
   }
   
   .brand img {
