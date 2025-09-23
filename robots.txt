@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /sw.js
+Disallow: /manifest.json
 
+# SEO optimizations
+Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://www.canssigorta.com/sitemap.xml
+
+# Additional sitemaps for better indexing
+Sitemap: https://www.canssigorta.com/sitemap-images.xml
