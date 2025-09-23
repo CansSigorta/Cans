@@ -116,21 +116,32 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   font-weight: 800;
   color: var(--primary);
   text-decoration: none;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 3rem;
 }
 
 .brand img {
-  height: 40px;
+  height: 45px;
   width: auto;
+}
+
+.brand span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .menu-toggle {
@@ -145,17 +156,21 @@ header {
 
 .menu {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
+  flex: 1;
+  justify-content: center;
 }
 
 .menu a {
   text-decoration: none;
   color: var(--gray-600);
   font-weight: 500;
+  font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap;
 }
 
 .menu a:hover,
@@ -446,6 +461,12 @@ header {
   border-color: var(--primary);
 }
 
+.acc-btn.open {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
 .acc-btn:after {
   content: '+';
   position: absolute;
@@ -472,6 +493,10 @@ header {
   border-top: none;
   border-radius: 0 0 var(--radius) var(--radius);
   margin-bottom: 0.5rem;
+}
+
+.acc-item.open .acc-panel {
+  max-height: 200px;
 }
 
 .acc-panel p {
@@ -617,6 +642,19 @@ footer a:hover {
 
 /* === Responsive Menu === */
 @media (max-width: 768px) {
+  .nav {
+    padding: 1rem 1rem;
+  }
+  
+  .brand {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  .brand img {
+    height: 35px;
+  }
+  
   .menu {
     display: none;
     position: absolute;
@@ -628,6 +666,7 @@ footer a:hover {
     flex-direction: column;
     padding: 1rem;
     box-shadow: var(--shadow-lg);
+    gap: 1rem;
   }
   
   .menu.open {
