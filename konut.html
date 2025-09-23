@@ -91,27 +91,6 @@
   </div>
 </section>
 
-<!-- Konut Hesaplayıcı Banner -->
-<section class="section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white);">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-      <div>
-        <h2 style="color: var(--white); margin-bottom: 1rem;">🏠 Konut Sigortası Hesaplayıcı</h2>
-        <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.9;">Ev değerinizi girin, anında prim hesaplayın!</p>
-        <button class="btn" style="background: var(--white); color: var(--primary); font-weight: 600; padding: 1rem 2rem; border-radius: 50px;" onclick="cansCalculators.openCalculator('konut')">
-          🧮 Konut Hesapla
-        </button>
-      </div>
-      <div style="text-align: center;">
-        <div style="background: rgba(255,255,255,0.1); border-radius: 2rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
-          <div style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Hızlı Hesaplama</div>
-          <div style="font-size: 1rem; opacity: 0.9;">Anında Sonuç</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="container">
@@ -260,20 +239,22 @@
   document.getElementById('yil').textContent = new Date().getFullYear();
 
   // Accordion functionality
-  document.querySelectorAll('.acc-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
-      
-      // Close all accordion items
-      document.querySelectorAll('.acc-item').forEach(item => {
-        item.classList.remove('open');
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.acc-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all accordion items
+        document.querySelectorAll('.acc-item').forEach(item => {
+          item.classList.remove('open');
+        });
+        
+        // Open clicked item if it wasn't open
+        if (!isOpen) {
+          item.classList.add('open');
+        }
       });
-      
-      // Open clicked item if it wasn't open
-      if (!isOpen) {
-        item.classList.add('open');
-      }
     });
   });
 

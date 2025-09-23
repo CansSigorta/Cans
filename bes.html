@@ -241,23 +241,25 @@
 <a class="whatsapp-fab" href="https://wa.me/905323510731?text=Merhaba%2C%20BES%20teklifi%20almak%20istiyorum." aria-label="WhatsApp">WhatsApp</a>
 
 <script>
-  document.getElementById('yil').textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('yil').textContent = new Date().getFullYear();
 
-  // Accordion functionality
-  document.querySelectorAll('.acc-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
-      
-      // Close all accordion items
-      document.querySelectorAll('.acc-item').forEach(item => {
-        item.classList.remove('open');
+    // Accordion functionality
+    document.querySelectorAll('.acc-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all accordion items
+        document.querySelectorAll('.acc-item').forEach(item => {
+          item.classList.remove('open');
+        });
+        
+        // Open clicked item if it wasn't open
+        if (!isOpen) {
+          item.classList.add('open');
+        }
       });
-      
-      // Open clicked item if it wasn't open
-      if (!isOpen) {
-        item.classList.add('open');
-      }
     });
   });
 

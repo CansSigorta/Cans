@@ -133,11 +133,22 @@
     if (a.href.startsWith('mailto:')) gtag('event','email_click',{email:a.href.replace('mailto:',''),location:window.location.pathname});
   });
 
-  document.querySelectorAll('.acc-btn').forEach(b=>{
-    b.addEventListener('click', ()=>{
-      b.classList.toggle('open');
-      const p=b.nextElementSibling;
-      p.style.maxHeight=p.style.maxHeight?null:p.scrollHeight+'px';
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.acc-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all accordion items
+        document.querySelectorAll('.acc-item').forEach(item => {
+          item.classList.remove('open');
+        });
+        
+        // Open clicked item if it wasn't open
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
     });
   });
 
